@@ -3,6 +3,7 @@
 
 # For TLS cert
 ### In development
+
 `openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 3650 -nodes -out ./key/certs/mycert.pem -keyout ./key/private/mykey.pem`
 
 ### In production
@@ -26,3 +27,6 @@ https://docs.aws.amazon.com/en_pv/sdk-for-go/v1/developer-guide/using-dynamodb-w
 Add object to dynamoDB
 ##### GetObject
 Get object to dynamoDB
+
+# Client
+Go Client didnt work (Dont know why, but dart client is working) 
