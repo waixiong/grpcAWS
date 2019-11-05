@@ -2,7 +2,7 @@
 - Download Docker
 
 # For TLS cert
-https://github.com/waixiong/grpcAWS
+https://workaround.org/ispmail/jessie/create-certificate
 ### In development
 `openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 3650 -nodes -out ./key/certs/mycert.pem -keyout ./key/private/mykey.pem`
 
