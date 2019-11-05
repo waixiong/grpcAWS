@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "space.cstudent.test.cheetest";
+option java_outer_classname = "myObjectProto";
+option objc_class_prefix = "mOP";
+
+package cheetest;
+
+// service definition.
+service MyService {
+  // reuqest response
+  rpc createObject (HelloRequest) returns (HelloReply) {}
+
+  // reuqest response
+  rpc getObject (HelloRequest) returns (HelloReply) {}
+
+  // reuqest stream - server stream to client
+  rpc getStream (HelloRequest) returns (stream HelloReply) {}
+
+  // stream response - client stream to server
+  rpc giveStream (stream HelloRequest) returns (HelloReply) {}
+
+  // bistream - live
+  rpc Chat (stream HelloRequest) returns (stream HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string message = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
